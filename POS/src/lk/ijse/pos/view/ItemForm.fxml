@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<AnchorPane fx:id="window" prefHeight="413.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.pos.controller.ItemFormController">
+    <children>
+        <Label layoutX="164.0" layoutY="24.0" text="Item Form" textFill="#680606">
+            <font>
+                <Font name="System Bold" size="22.0"/>
+            </font>
+        </Label>
+        <TextField fx:id="txtCode" layoutX="12.0" layoutY="64.0" promptText="Item Code"/>
+        <TextField fx:id="txtUPrice" layoutX="12.0" layoutY="106.0" prefHeight="26.0" prefWidth="360.0"
+                   promptText="Unit Price"/>
+        <TextField fx:id="txtDescription" layoutX="199.0" layoutY="64.0" prefHeight="26.0" prefWidth="385.0"
+                   promptText="Description"/>
+        <TextField fx:id="txtQTYOnHand" layoutX="382.0" layoutY="106.0" prefHeight="26.0" prefWidth="202.0"
+                   promptText="QTY On Hand"/>
+        <Button layoutX="495.0" layoutY="24.0" mnemonicParsing="false" onAction="#btnNewOnAction" prefHeight="26.0"
+                prefWidth="83.0" style="-fx-background-color: #2ecc71;" text="+ New" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="15.0"/>
+            </font>
+        </Button>
+        <Button fx:id="btnSave" layoutX="12.0" layoutY="145.0" mnemonicParsing="false" onAction="#btnSaveOnAction"
+                prefHeight="26.0" prefWidth="83.0" style="-fx-background-color: #2980b9;" text="Save" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="15.0"/>
+            </font>
+        </Button>
+        <TextField fx:id="txtSearch" layoutX="106.0" layoutY="147.0" prefHeight="26.0" prefWidth="477.0"
+                   promptText="Search Here"/>
+        <TableView fx:id="table" layoutX="12.0" layoutY="183.0" prefHeight="221.0" prefWidth="571.0">
+            <columns>
+                <TableColumn fx:id="col_code" prefWidth="75.0" text="Code"/>
+                <TableColumn fx:id="col_description" prefWidth="110.0" text="Description"/>
+                <TableColumn fx:id="col_UPrice" prefWidth="111.0" text="Unit Price"/>
+                <TableColumn fx:id="colQtyOnHand" prefWidth="111.0" text="QTY On Hand"/>
+                <TableColumn fx:id="col_Operate" prefWidth="162.0" text="Operate"/>
+            </columns>
+        </TableView>
+        <ImageView fitHeight="51.0" fitWidth="83.0" layoutX="9.0" layoutY="5.0" onMouseClicked="#btnBackToHome"
+                   pickOnBounds="true">
+            <image>
+                <Image url="@../asserts/Back-Button.gif"/>
+            </image>
+            <cursor>
+                <Cursor fx:constant="HAND"/>
+            </cursor>
+        </ImageView>
+    </children>
+</AnchorPane>
